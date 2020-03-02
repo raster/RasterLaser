@@ -12,7 +12,7 @@ There's a blog post here that walks through the upgrade:
   http://rasterweb.net/raster/2018/05/04/cohesion3d-mini-full-spectrum-laser/
 
 
-If you want to do the same upgrade, check out the LaserBoard from Cohesion3D. It' basically a newer and much improved version of the Mini board I am using.
+If you want to do the same upgrade, check out the LaserBoard from Cohesion3D. It's basically a newer and much improved version of the Mini board I am using.
 
   https://cohesion3d.com/
 
