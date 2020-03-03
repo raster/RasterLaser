@@ -2,6 +2,8 @@
 
 RasterLaser is the (unofficial) name of my Laser Cutter.
 
+![](Photos/cohesion3d-020.jpg)
+
 It's an old Full Spectrum 4th Generation Series 40w Hobby Laser that I upgraded with a Cohesion3D Mini control board. (I also "upgraded" it with a 35 watt tube.)
 
 I wanted to drop my config.txt file here in case it's useful to others. (And now it's in version control for me, which is also helpful.)
