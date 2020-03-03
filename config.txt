@@ -140,7 +140,7 @@ switch.laserfire.input_off_command M5
 temperature_control.hotend.enable            false            # Whether to activate this ( "hotend" ) module at all.
                                                               # All configuration is ignored if false.
 temperature_control.hotend.thermistor_pin    0.23             # Pin for the thermistor to read
-temperature_control.hotend.heater_pin        2.7              # Pin that controls the heater, set to nc if a readonly thermistor is being defined
+temperature_control.hotend.heater_pin        nc              # Pin that controls the heater, set to nc if a readonly thermistor is being defined
 temperature_control.hotend.thermistor        EPCOS100K        # see http://smoothieware.org/temperaturecontrol#toc5
 #temperature_control.hotend.beta             4066             # or set the beta value
 temperature_control.hotend.set_m_code        104              #
@@ -193,12 +193,12 @@ temperature_control.bed.designator           B                #
                                                               # when using bang bang
 
 ## Switch module for fan control
-switch.fan.enable                            false
+switch.fan.enable                            true
 switch.fan.input_on_command                  M106             #
 switch.fan.input_off_command                 M107             #
-switch.fan.output_pin                        2.6              #
-switch.fan.output_type                       pwm              # pwm output settable with S parameter in the input_on_comand
-#switch.fan.max_pwm                           255              # set max pwm for the pin default is 255
+switch.fan.output_pin                        2.7              #
+switch.fan.output_type                       digital          # pwm output settable with S parameter in the input_on_comand (or set to digital?)
+#switch.fan.max_pwm                          255              # set max pwm for the pin default is 255
 
 #switch.misc.enable                           true             #
 #switch.misc.input_on_command                 M42              #
