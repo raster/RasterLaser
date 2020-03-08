@@ -240,8 +240,8 @@ gamma_homing_direction                       home_to_min      #
 gamma_min                                    0                #
 gamma_max                                    200              #
 
-alpha_max_travel                             500              # max travel in mm for alpha/X axis when homing
-beta_max_travel                              500              # max travel in mm for beta/Y axis when homing
+alpha_max_travel                             246              # max travel in mm for alpha/X axis when homing
+beta_max_travel                              372              # max travel in mm for beta/Y axis when homing
 gamma_max_travel                             500              # max travel in mm for gamma/Z axis when homing
 
 # optional order in which axis will home, default is they all home at the same time,
