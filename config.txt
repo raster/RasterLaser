@@ -1,4 +1,4 @@
-# Pete Prodoehl [RasterLaser] 2020-03-08
+# Pete Prodoehl [RasterLaser] 2020-05-28
 # NOTE Lines must not exceed 132 characters
 ## Robot module configurations : general handling of movement G-codes and slicing into moves
 default_feed_rate                            4000             # Default rate ( mm/minute ) for G1/G2/G3 moves
@@ -192,7 +192,7 @@ temperature_control.bed.designator           B                #
 #temperature_control.bed.hysteresis           2.0             # set to the temperature in degrees C to use as hysteresis
                                                               # when using bang bang
 
-## Switch module for fan control
+## Switch module for air assist - a 5v power supply is wired to the MOSFET to provide power to a relay board
 switch.fan.enable                            true
 switch.fan.input_on_command                  M106             #
 switch.fan.input_off_command                 M107             #
