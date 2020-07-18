@@ -7,13 +7,13 @@ mm_per_arc_segment                           0.0              # Fixed length for
 mm_max_arc_error                             0.01             # The maximum error for line segments that divide arcs 0 to disable
                                                               # note it is invalid for both the above be 0
                                                               # if both are used, will use largest segment length based on radius
-#mm_per_line_segment                          5                # Lines can be cut into segments ( not usefull with cartesian
+#mm_per_line_segment                          5               # Lines can be cut into segments ( not usefull with cartesian
                                                               # coordinates robots ).
 
 # Arm solution configuration : Cartesian robot. Translates mm positions into stepper positions
 alpha_steps_per_mm                           157.575          # Steps per mm for alpha stepper
 beta_steps_per_mm                            157.575          # Steps per mm for beta stepper
-gamma_steps_per_mm                           1600             # Steps per mm for gamma stepper
+gamma_steps_per_mm                           157.575          # Steps per mm for gamma stepper
 
 # Planner module configuration : Look-ahead and acceleration configuration
 planner_queue_size                           32               # DO NOT CHANGE THIS UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING
@@ -75,11 +75,11 @@ kill_button_pin                              2.12             # kill button pin.
 currentcontrol_module_enable                 true             #
 
 ## Extruder module configuration
-extruder.hotend.enable                          false            # Whether to activate the extruder module at all. All configuration is ignored if false
-extruder.hotend.steps_per_mm                    140              # Steps per mm for extruder stepper
-extruder.hotend.default_feed_rate               600              # Default rate ( mm/minute ) for moves where only the extruder moves
-extruder.hotend.acceleration                    500              # Acceleration for the stepper motor mm/sec�
-extruder.hotend.max_speed                       50               # mm/s
+extruder.hotend.enable                          false          # Whether to activate the extruder module at all. All configuration is ignored if false
+extruder.hotend.steps_per_mm                    157.575        # Steps per mm for extruder stepper
+extruder.hotend.default_feed_rate               60000          # Default rate ( mm/minute ) for moves where only the extruder moves
+extruder.hotend.acceleration                    3000           # Acceleration for the stepper motor mm/sec?
+extruder.hotend.max_speed                       1000           # mm/s
 
 extruder.hotend.step_pin                        2.3              # Pin for extruder step signal
 extruder.hotend.dir_pin                         0.22             # Pin for extruder dir signal
@@ -97,8 +97,7 @@ extruder.hotend.en_pin                          0.21             # Pin for extru
 #extruder.hotend.retract_recover_feedrate        8               # recover feedrate in mm/sec (should be less than retract feedrate)
 #extruder.hotend.retract_zlift_length            0               # zlift on retract in mm, 0 disables
 #extruder.hotend.retract_zlift_feedrate          6000            # zlift feedrate in mm/min (Note mm/min NOT mm/sec)
-
-delta_current                                1.5              # First extruder stepper motor current
+#delta_current                                    1.8              # First extruder stepper motor current
 
 # Second extruder module configuration
 #extruder.hotend2.enable                          false            # Whether to activate the extruder module at all. All configuration is ignored if false
@@ -114,26 +113,26 @@ delta_current                                1.5              # First extruder s
 #extruder.hotend2.x_offset                        0                # x offset from origin in mm
 #extruder.hotend2.y_offset                        25.0             # y offset from origin in mm
 #extruder.hotend2.z_offset                        0                # z offset from origin in mm
-#epsilon_current                              1.5              # Second extruder stepper motor current
+#epsilon_current                                  1.5              # Second extruder stepper motor current
 
 
 ## Laser module configuration
 laser_module_enable                           true            # Whether to activate the laser module at all. All configuration is
                                                               # ignored if false.
-laser_module_pin                              2.5            # this pin will be PWMed to control the laser. Only P2.0 - P2.5, P1.18, P1.20, P1.21, P1.23, P1.24, P1.26, P3.25, P3.26
+laser_module_pin                              2.5             # this pin will be PWMed to control the laser. Only P2.0 - P2.5, P1.18, P1.20, P1.21, P1.23, P1.24, P1.26, P3.25, P3.26
                                                               # can be used since laser requires hardware PWM
 laser_module_maximum_power                    1.0             # this is the maximum duty cycle that will be applied to the laser
 laser_module_minimum_power                    0.0             # This is a value just below the minimum duty cycle that keeps the laser
                                                               # active without actually burning.
 #laser_module_default_power                   0.8             # This is the default laser power that will be used for cuts if a power has not been specified.  The value is a scale between
                                                               # the maximum and minimum power levels specified above
-laser_module_pwm_period                       200              # this sets the pwm frequency as the period in microseconds
+laser_module_pwm_period                       200             # this sets the pwm frequency as the period in microseconds
 
-switch.laserfire.enable true
-switch.laserfire.output_pin 2.6
-switch.laserfire.output_type digital
-switch.laserfire.input_on_command M3
-switch.laserfire.input_off_command M5
+switch.laserfire.enable                       true
+switch.laserfire.output_pin                   2.6
+switch.laserfire.output_type                  digital
+switch.laserfire.input_on_command             M3
+switch.laserfire.input_off_command            M5
 
 ## Temperature control configuration
 # First hotend configuration
@@ -152,7 +151,7 @@ temperature_control.hotend.designator        T                #
 # safety control is enabled by default and can be overidden here, the values show the defaults
 #temperature_control.hotend.runaway_heating_timeout      900   # max is 2040 seconds, how long it can take to heat up
 #temperature_control.hotend.runaway_cooling_timeout      900   # max is 2040 seconds, how long it can take to cool down if temp is set lower
-#temperature_control.hotend.runaway_range                20    # Max setting is 63�C
+#temperature_control.hotend.runaway_range                20    # Max setting is 63?C
 
 #temperature_control.hotend.p_factor         13.7             # permanently set the PID values after an auto pid
 #temperature_control.hotend.i_factor         0.097            #
