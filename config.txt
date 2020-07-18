@@ -1,4 +1,4 @@
-# Pete Prodoehl [RasterLaser] 2020-05-28
+# Pete Prodoehl [RasterLaser] 2020-07-18
 # NOTE Lines must not exceed 132 characters
 ## Robot module configurations : general handling of movement G-codes and slicing into moves
 default_feed_rate                            4000             # Default rate ( mm/minute ) for G1/G2/G3 moves
@@ -127,7 +127,7 @@ laser_module_minimum_power                    0.0             # This is a value 
                                                               # active without actually burning.
 #laser_module_default_power                   0.8             # This is the default laser power that will be used for cuts if a power has not been specified.  The value is a scale between
                                                               # the maximum and minimum power levels specified above
-laser_module_pwm_period                       200              # this sets the pwm frequency as the period in microseconds
+laser_module_pwm_period                       400              # this sets the pwm frequency as the period in microseconds
 
 switch.laserfire.enable true
 switch.laserfire.output_pin 2.6
