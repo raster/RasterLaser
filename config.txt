@@ -320,12 +320,12 @@ panel.bed_temperature                        60                # temp to set bed
 ## Custom menus : Example of a custom menu entry, which will show up in the Custom entry.
 # NOTE _ gets converted to space in the menu and commands, | is used to separate multiple commands
 custom_menu.power_on.enable                true              #
-custom_menu.power_on.name                  Power_on          #
-custom_menu.power_on.command               M80               #
+custom_menu.power_on.name                  Air_on          #
+custom_menu.power_on.command               M106               #
 
 custom_menu.power_off.enable               true              #
-custom_menu.power_off.name                 Power_off         #
-custom_menu.power_off.command              M81               #
+custom_menu.power_off.name                 Air_off         #
+custom_menu.power_off.command              M107               #
 
 
 ## Network settings
